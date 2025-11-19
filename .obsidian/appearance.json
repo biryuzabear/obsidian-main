@@ -1,0 +1,13 @@
+{
+  "accentColor": "#5cc2f5",
+  "theme": "system",
+  "cssTheme": "Minimal",
+  "enabledCssSnippets": [
+    "S - Checkboxes",
+    "supercharged-links-gen",
+    "custom-rainbow-colors"
+  ],
+  "nativeMenus": false,
+  "translucency": false,
+  "baseFontSize": 18
+}

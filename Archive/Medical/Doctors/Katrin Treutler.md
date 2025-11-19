@@ -1,0 +1,3 @@
+Dr. Katrin Treutler is a specialist in internal medicine and infectiology. After 12 years at Klinikum Sankt Georg, she transitioned to outpatient care to apply her expertise in treating acute and chronic internal diseases. She has extensive experience in infectious diseases, particularly in managing patients with acquired immunodeficiency and related infections.
+
+Since 2019, she has been running a medical [[Katrin Treutler Arztpraxis|practice in Taucha]]. Her career includes work at Klinikum Sankt Georg and the University of Jena, specialising in infectiology and tropical medicine. She also holds additional qualifications in travel medicine. Dr. Treutler studied at the University of Leipzig and initially trained as a medical laboratory assistant.

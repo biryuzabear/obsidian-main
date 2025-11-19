@@ -1,0 +1,6 @@
+---
+tags:
+contacts:
+address:
+people:
+---

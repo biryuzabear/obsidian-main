@@ -1,0 +1,7 @@
+- [ ] Semantic notes with voice look-up
+- [ ] Learning by reading texts
+- [ ] Anki telegram bot cards
+- [ ] Habit tracker
+- [ ] ACT therapy course
+- [ ] Should Be There (GPS commitment app)
+- [ ] Tarot Bot

@@ -1,0 +1,77 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "Templates",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": false,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "Content",
+      "template": "Templates/content.md"
+    },
+    {
+      "folder": "Daily",
+      "template": "Templates/daily.md"
+    },
+    {
+      "folder": "Documents",
+      "template": "Templates/document.md"
+    },
+    {
+      "folder": "Ideas",
+      "template": "Templates/idea.md"
+    },
+    {
+      "folder": "Notes",
+      "template": "Templates/note.md"
+    },
+    {
+      "folder": "Pages",
+      "template": "Templates/page.md"
+    },
+    {
+      "folder": "People",
+      "template": "Templates/person.md"
+    },
+    {
+      "folder": "Projects",
+      "template": "Templates/project.md"
+    },
+    {
+      "folder": "Records",
+      "template": "Templates/record.md"
+    },
+    {
+      "folder": "Sites",
+      "template": "Templates/site.md"
+    },
+    {
+      "folder": "Events",
+      "template": "Templates/event.md"
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    ""
+  ],
+  "startup_templates": [
+    ""
+  ]
+}

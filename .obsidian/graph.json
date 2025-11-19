@@ -1,0 +1,22 @@
+{
+  "collapse-filter": false,
+  "search": "path: Notes  ",
+  "showTags": true,
+  "showAttachments": true,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1.05519155272777,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": false,
+  "centerStrength": 0.207932855015568,
+  "repelStrength": 13.2557195072425,
+  "linkStrength": 0.710437254636524,
+  "linkDistance": 250,
+  "scale": 0.07058168893772133,
+  "close": false
+}

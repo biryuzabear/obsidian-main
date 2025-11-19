@@ -1,0 +1,15 @@
+- [x] Body wash  
+- [x] Shoes  
+- [x] Shorts  
+- [x] Socks  
+- [x] T-shirt  
+- [x] Bag  
+- [x] Bag for wet
+- [x] Deodorant  
+- [x] Fitness tracker  
+- [x] Flip-flops  
+- [x] Headphones  
+- [x] IPad with questions  
+- [x] Moisturizer  
+- [x] Towel  
+- [x] Water bottle  

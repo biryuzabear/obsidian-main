@@ -1,0 +1,10 @@
+- https://www.linkedin.com/jobs/
+- https://englishjobs.de/
+- https://www.wearedevelopers.com/
+- https://www.remocate.app/
+- https://de.indeed.com/?r=us
+- https://www.stepstone.de/en
+- https://www.xing.com/jobs/find
+- https://de.talent.com/jobs?l=Riesa
+- https://www.jobleads.com/home
+- https://www.arbeitsagentur.de/

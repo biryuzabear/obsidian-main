@@ -1,0 +1,23 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "doc-date": "date",
+    "doc-person": "multitext",
+    "doc-relate": "multitext",
+    "doc-object": "multitext",
+    "doc-id": "text",
+    "date": "date",
+    "app-date": "date",
+    "related-projects": "multitext",
+    "have-tried": "checkbox",
+    "field": "multitext",
+    "start-date": "date",
+    "end-date": "date",
+    "day-rating": "number",
+    "day-mood": "multitext",
+    "event-type": "multitext",
+    "contacts": "multitext"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /b \"G:\\My Drive\\Obsidian\\Main\")",
+      "Bash(done)",
+      "Bash(git init:*)",
+      "Bash(.gitignore)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

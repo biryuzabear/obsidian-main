@@ -1,0 +1,9 @@
+- [ ] Adolescence #with_maksim
+- [ ] Andor
+- [ ] Arcane, Season 2 #with_maksim
+- [ ] Lessons in Chemistry #with_maksim
+- [ ] Severance #with_maksim
+- [ ] Star Wars: Clone Wars
+- [ ] Years and Years #with_maksim
+- [x] Cien años de soledad #with_maksim
+- [x] Doctor Who, Last Seasons #with_maksim
