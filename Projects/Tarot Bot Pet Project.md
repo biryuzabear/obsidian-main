@@ -17,7 +17,7 @@ field:
 
 - [x] Определить технический стек
 - [x] Выбрать колоду для MVP (Rider-Waite-Smith)
-- [ ] Спроектировать архитектуру
+- [x] Спроектировать архитектуру
 
 ## Разработка
 
@@ -49,6 +49,10 @@ field:
 > | Frontend | React (Telegram Mini Apps) |
 > | Хостинг | Dokploy + Cloudflare Tunnel |
 > | Визуализация | Java2D + ImageIO |
+> | Whisper | Локальный (whisper-asr-webservice) |
+> | Миграции | Flyway |
+> | Логирование | SLF4J + Logback + Spring Boot Admin |
+> | Деплой | Dokploy из GitHub |
 
 ## Структура модулей
 
@@ -73,7 +77,8 @@ field:
 >   ├── repository/    # JPA репозитории
 >   ├── model/         # Сущности, DTO, enums
 >   ├── integration/
->   │   ├── OpenAiClient (GPT + Whisper)
+>   │   ├── OpenAiClient (GPT)
+>   │   ├── WhisperClient (локальный)
 >   │   └── PaymentClient
 >   └── util/          # Хелперы
 > ```
@@ -98,6 +103,53 @@ field:
 > ### SkinController
 > - `GET /api/skins` — каталог скинов
 > - `GET /api/skins/{id}` — детали скина
+
+## Системный дизайн
+
+> [!info]- Решения
+> ### Аутентификация
+> - Проверка initData от Telegram (подпись + auth_date)
+> - Без JWT, без ролей
+>
+> ### Обработка ошибок
+> - Global Exception Handler
+> - Единый формат ответа: `{error, message, details}`
+> - RuntimeException для бизнес-ошибок
+> - Swagger документация для каждого эндпоинта
+>
+> ### Кэширование
+> - Registry при старте: Decks, Cards, SpreadTypes, Skins, Products
+> - Caffeine cache: Users (evict при обновлении)
+> - Без кэша: Readings, Payments
+>
+> ### Логирование
+> - INFO в консоль
+> - DEBUG в файл
+> - Ротация ежедневно, хранить 30 дней
+> - Spring Actuator health check
+>
+> ### Безопасность
+> - Валидация в DTO (@Valid, @Size)
+> - CORS только для Telegram доменов
+> - Секреты в env переменных
+> - Prompt injection защита в системном промпте
+> - Лимит голосового 60 сек
+> - Лимит вопроса 2000 символов
+
+## Компоненты
+
+> [!code]- Архитектура
+> ```
+> [Telegram] → webhook → [Bot Handlers]
+> [Mini App] → REST → [API Controllers]
+>                            ↓
+>                      [Services] ←→ [Registry]
+>                            ↓
+>                      [Repository] → [PostgreSQL]
+>                            ↓
+>               [OpenAI Client] → [OpenAI API]
+>               [Whisper Client] → [Whisper Container]
+> ```
 
 ## Схема данных
 
@@ -230,6 +282,52 @@ field:
 > 13. **Каталог скинов** — Просмотр и покупка скинов для колод
 > 14. **Избранные расклады** — Добавление в закладки, фильтр по избранному
 > 15. **Заметки к раскладу** — Личные заметки пользователя к раскладам
+
+## Roadmap
+
+> [!note]- Фазы разработки
+> ### Фаза 1: Инфраструктура
+> - Создать репозиторий
+> - Настроить Spring Boot проект
+> - Docker + PostgreSQL
+> - Flyway миграции (все таблицы)
+>
+> ### Фаза 2: Модель данных
+> - JPA сущности
+> - Репозитории
+> - Registry для справочников
+> - Тестовые данные (колода Rider-Waite, типы раскладов)
+>
+> ### Фаза 3: Базовый бот
+> - Регистрация бота
+> - Webhook
+> - Онбординг
+> - Главное меню
+>
+> ### Фаза 4: Генерация раскладов
+> - Логика генерации карт
+> - Визуализация (Java2D)
+> - Сохранение в БД
+>
+> ### Фаза 5: AI интерпретация
+> - OpenAI интеграция
+> - Whisper интеграция
+> - Промпты для интерпретации
+>
+> ### Фаза 6: Mini App
+> - React приложение
+> - API эндпоинты
+> - История раскладов
+> - Избранное, заметки
+>
+> ### Фаза 7: Деплой
+> - Dokploy настройка
+> - Cloudflare Tunnel
+> - Мониторинг
+>
+> ### Фаза 8: Монетизация
+> - Telegram Stars / платёжка
+> - Покупка паков
 
 ## Идеи
 

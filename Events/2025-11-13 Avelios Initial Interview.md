@@ -1,8 +1,14 @@
 ---
 tags:
+  - interview
+  - job-search
 start-date: 2025-11-13
-event-type:
-  - Interview
+end-date: 2025-11-13
+event-type: Interview
+people:
+  - Antonia Lunau
+related-projects:
+  - "[[Job Search]]"
 ---
 # Description
 

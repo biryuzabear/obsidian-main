@@ -1,0 +1,45 @@
+---
+tags:
+  - infectious
+  - std
+start-date: 2025-06-27
+end-date: 2025-06-27
+event-type: Check-Up
+people:
+  - Katrin Treutler
+related-projects:
+  - "[[Everyday Health]]"
+---
+# Description
+
+Регулярная проверка STD в Arztpraxis Katrin Treutler.
+
+# Agenda
+
+
+# Notes
+
+1. Возможность получить прививку от гепатита а - сдали анализы, в зависимости от резульатов можно сделать два бустера, первый и ещё через полгода
+
+2. Выписали рецепты на препы, действует недолго, нужно купить (особенно если я решу, что я хочу пить препы постоянно - хочу ли я?)
+
+3. Если результаты положительные - можно не делать, если отрицательные - можно приехатьт в любое время и там будут в курсе, без термина
+
+4. Она на 2 недели в отпуске, если какие-то проблемы - к замещающему врачу (уточнить у Максима, но скорее всего не понадобится)
+
+5. Результаты анализов:
+    1. Вич - отрицательно
+    2. Сифилис - отрицательно
+    3. Гоноррея - отрицательно
+    4. Хламидия - отрицательно
+    5. Гонококки - отрицательно
+
+Теперь результаты анализов нужно смотреть на этом сайте: [https://befundabruf.aolabor.de/](https://befundabruf.aolabor.de/)
+
+Документы:
+- [https://drive.google.com/file/d/1I8xoIIi9xOHbFJ8vL7Qu9JB8Buovqb6q/view?usp=drive_link](https://drive.google.com/file/d/1I8xoIIi9xOHbFJ8vL7Qu9JB8Buovqb6q/view?usp=drive_link) - вич, сифилис
+- [https://drive.google.com/file/d/1XQgYdliZqZty2E8Xt_AAuOEXfVCvo0S9/view?usp=drive_link](https://drive.google.com/file/d/1XQgYdliZqZty2E8Xt_AAuOEXfVCvo0S9/view?usp=drive_link) - хламидия, гоноррея, гонококк
+- [https://drive.google.com/file/d/1e3FM56R0A24r7mjfo-zza45WjKynRA4f/view?usp=drive_link](https://drive.google.com/file/d/1e3FM56R0A24r7mjfo-zza45WjKynRA4f/view?usp=drive_link) - нет антител к гепатиту А, рекомендуется сделать вакцину
+
+# Actions
+

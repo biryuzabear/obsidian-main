@@ -69,3 +69,24 @@ field:
 - How do you usually work with cross-functional teams? (fine)
 - How do you handle tight deadlines or high-pressure situations? (also fine)
 - Can you give an example of resolving a team conflict? (no)
+
+# Events
+
+```base
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.inFolder("Events")
+        - note["related-projects"].contains(this.file.asLink())
+    order:
+      - file.name
+      - start-date
+      - event-type
+    sort:
+      - property: start-date
+        direction: DESC
+    columnSize:
+      note.event-type: 120
+```

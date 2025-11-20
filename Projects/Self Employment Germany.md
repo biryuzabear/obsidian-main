@@ -44,3 +44,24 @@ tags:
 > Налоговые консультанты – https://allaboutberlin.com/guides/english-speaking-steuerberater-berlin
 > 
 > Проверка, является ли самозанятость фиктивной, от пенсионной страховки – https://www.deutsche-rentenversicherung.de/DRV/DE/Rente/Arbeitnehmer-und-Selbststaendige/03_Selbststaendige/statusfeststellungsverfahren.html
+
+# Events
+
+```base
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.inFolder("Events")
+        - note["related-projects"].contains(this.file.asLink())
+    order:
+      - file.name
+      - start-date
+      - event-type
+    sort:
+      - property: start-date
+        direction: DESC
+    columnSize:
+      note.event-type: 120
+```

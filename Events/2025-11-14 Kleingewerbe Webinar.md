@@ -2,7 +2,7 @@
 tags:
   - integration
 start-date: 2025-11-14
-end-date: 2025-11-14
+end-date:
 event-type:
   - Webinar
 people:
