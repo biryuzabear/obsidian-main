@@ -14,7 +14,7 @@ This is an Obsidian vault containing personal notes. All content is in Markdown 
 - **Ideas/** - Future plans and project ideas (AWS Certification, LLM projects, personal goals)
 - **Projects/** - Active projects with tracking (Job Search, German Learning, Self Employment, etc.)
 - **Events/** - Upcoming or past events (interviews, appointments)
-- **Pages/** - Standalone documents (test tasks, medical descriptions)
+- **Pages/** - Standalone pages with arbitrary format (test tasks, medical descriptions, any freeform content)
 
 ### Reference & Knowledge
 - **Content/** - Book notes and summaries (A Liberated Mind, Jedi Techniques, The Happiness Trap)
@@ -45,6 +45,7 @@ This is an Obsidian vault containing personal notes. All content is in Markdown 
 | Content notes         | Content/{TitleName}.md           |
 | Person profile        | People/{FullName}.md             |
 | Quick note/reference  | Notes/{Topic}.md                 |
+| Standalone page       | Pages/{PageName}.md              |
 | Future idea/goal      | Ideas/{IdeaName}.md              |
 | Event/appointment     | Events/{EventName}.md            |
 | Official document     | Documents/{Country}/             |
@@ -58,3 +59,17 @@ This is an Obsidian vault containing personal notes. All content is in Markdown 
 - Treat all content as personal and confidential
 - Maintain Obsidian-compatible syntax (wikilinks, tags, YAML frontmatter)
 - Prioritize Russian over English for file content
+
+## Working with Projects
+
+- **Iterative approach** — work through steps, can add new ones in parallel
+- **Artifacts** — results of steps (plans, information, code) are added to project notes
+- **Headings** — use correct hierarchy (H1 for title, H2 for sections, H3+ for subsections)
+- **Callouts** — use for:
+  - Large chunks of information (features, use cases)
+  - Code blocks — **always collapsed** (`> [!code]-`)
+  - Important notes and warnings
+- **Project structure**:
+  - Goal — project objective
+  - Steps — steps with checkboxes
+  - Info — artifacts, features, use cases, code, notes

@@ -3,6 +3,6 @@ field:
 have-tried: false
 tags:
 ---
-- [ ] Камень в почке
+- [ ] Камень в почке — см. [[Shenshitong Keli]]
 - [ ] Пересадка волос
 - [ ] Прикус
