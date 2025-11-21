@@ -174,94 +174,151 @@ field:
 
 > [!code]- User
 > - id
-> - telegram_id
-> - username
-> - display_name
-> - gender
-> - available_readings
-> - language
-> - preferred_deck_id
-> - interpretation_style
-> - spread_theme
-> - owned_skins (JSONB)
-> - last_active_at
-> - is_blocked
+> - telegram_id — ID пользователя в Telegram
+> - username — @username в Telegram
+> - display_name — как обращаться к пользователю
+> - gender — для правильного обращения (он/она/они)
+> - available_readings — количество доступных раскладов (уменьшается при использовании)
+> - language — язык интерфейса и интерпретаций
+> - preferred_deck_id — выбранная колода по умолчанию
+> - interpretation_style — стиль AI ответов (краткий/подробный/поэтичный)
+> - spread_theme — визуальная тема для раскладов
+> - owned_skins (JSONB) — массив ID купленных скинов `[1, 2, 5]`
+> - last_active_at — для аналитики активности
+> - is_blocked — бан за абуз
 > - created_at
 
 > [!code]- Deck
 > - id
-> - name
-> - description
-> - deck_type (enum: STANDARD_78, MAJOR_ONLY_22, ORACLE, LENORMAND, PLAYING_CARDS)
-> - cards_count
-> - is_active
+> - name — название колоды
+> - description — описание и история колоды
+> - deck_type (enum: STANDARD_78, MAJOR_ONLY_22, ORACLE, LENORMAND, PLAYING_CARDS) — тип определяет совместимость с раскладами
+> - cards_count — количество карт в колоде
+> - is_active — можно скрыть без удаления
 
 > [!code]- Card
 > - id
-> - deck_id
-> - card_index
-> - name
-> - arcana (enum: MAJOR, MINOR, nullable)
-> - suit (enum: WANDS, CUPS, SWORDS, PENTACLES, nullable)
-> - meaning_upright
-> - meaning_reversed
+> - deck_id — к какой колоде принадлежит
+> - card_index — порядковый номер (0-77 для стандартной колоды)
+> - name — название карты
+> - arcana (enum: MAJOR, MINOR, nullable) — null для нестандартных колод
+> - suit (enum: WANDS, CUPS, SWORDS, PENTACLES, nullable) — масть, null для Major Arcana
+> - meaning_upright — значение в прямом положении
+> - meaning_reversed — значение в перевёрнутом положении
 
 > [!code]- Skin
 > - id
-> - name
-> - deck_id
-> - author
-> - preview_image
-> - description
-> - tags (JSONB)
-> - is_default
-> - is_active
+> - name — название скина
+> - deck_id — для какой колоды (обязательно)
+> - author — имя художника
+> - preview_image — путь к превью
+> - description — описание стиля
+> - tags (JSONB) — массив тегов для фильтрации `["modern", "dark", "geometric"]`
+> - is_default — скин по умолчанию для колоды
+> - is_active — можно скрыть без удаления
+>
+> Изображения карт по конвенции: `decks/{deck_id}/skins/{skin_id}/{card_index}.png`
 
 > [!code]- SpreadType
 > - id
-> - name
-> - description
-> - category (enum: GENERAL, LOVE, CAREER, DECISION, SELF)
-> - complexity (enum: SIMPLE, MEDIUM, COMPLEX)
-> - reversed_mode (enum: UPRIGHT_ONLY, REVERSED_ONLY, MIXED)
-> - layout (JSONB)
-> - icon
-> - sort_order
-> - is_active
+> - name — название расклада
+> - description — описание и когда использовать
+> - category (enum: GENERAL, LOVE, CAREER, DECISION, SELF) — для фильтрации по теме
+> - complexity (enum: SIMPLE, MEDIUM, COMPLEX) — сложность расклада
+> - reversed_mode (enum: UPRIGHT_ONLY, REVERSED_ONLY, MIXED) — разрешены ли перевёрнутые карты
+> - layout (JSONB) — схема расположения карт (см. ниже)
+> - icon — эмодзи для меню
+> - sort_order — порядок в списке
+> - is_active — можно скрыть без удаления
+>
+> **Структура layout (JSONB):**
+> ```json
+> {
+>   "aspectRatio": "4:3",
+>   "cardScale": 0.15,
+>   "background": "default",
+>   "positions": [
+>     {
+>       "index": 1,
+>       "name": "Настоящее",
+>       "description": "Текущая ситуация",
+>       "x": 0.5,
+>       "y": 0.5,
+>       "rotation": 0
+>     }
+>   ]
+> }
+> ```
+>
+> **Как работает:**
+> - `aspectRatio` — пропорции холста для генерации изображения
+> - `cardScale` — размер карты относительно холста (0.0-1.0)
+> - `x`, `y` — относительные координаты (0.0-1.0), масштабируются под любой размер
+> - `rotation` — угол поворота карты в градусах
+> - `description` — используется AI для интерпретации позиции
 
 > [!code]- Reading
 > - id
-> - user_id
-> - spread_type_id
-> - question_text
-> - question_type (enum: TEXT, VOICE)
-> - is_photo_reading
-> - reading_data (JSONB: deck_id, cards)
-> - interpretation_text
-> - interpretation_style
-> - is_favorite
-> - is_archived
-> - user_notes
+> - user_id — чей расклад
+> - spread_type_id — тип расклада
+> - question_text — вопрос пользователя (или транскрипция голосового)
+> - question_type (enum: TEXT, VOICE) — для аналитики
+> - is_photo_reading — расклад по фото (AI распознал карты)
+> - reading_data (JSONB) — данные расклада (см. ниже)
+> - interpretation_text — ответ AI
+> - interpretation_style — стиль интерпретации (для аналитики)
+> - is_favorite — в закладках
+> - is_archived — скрыт из истории
+> - user_notes — личные заметки пользователя
 > - created_at
+>
+> **Структура reading_data (JSONB):**
+> ```json
+> {
+>   "deck_id": 1,
+>   "cards": [
+>     {"position": 1, "card_index": 0, "reversed": false},
+>     {"position": 2, "card_index": 22, "reversed": true}
+>   ]
+> }
+> ```
+>
+> **Как работает:**
+> - `deck_id` — какая колода использовалась
+> - `position` — номер позиции в раскладе (соответствует index из layout)
+> - `card_index` — номер карты в колоде
+> - `reversed` — перевёрнута ли карта
 
 > [!code]- Product
 > - id
-> - name
-> - type (enum: READINGS_PACK, SKIN, SUBSCRIPTION)
-> - params (JSONB)
-> - price
-> - currency
-> - is_active
+> - name — название товара
+> - type (enum: READINGS_PACK, SKIN, SUBSCRIPTION) — тип товара
+> - params (JSONB) — параметры в зависимости от типа (см. ниже)
+> - price — цена
+> - currency — валюта
+> - is_active — можно скрыть без удаления
+>
+> **Структура params (JSONB) по типам:**
+> ```json
+> // READINGS_PACK
+> {"readings_amount": 10}
+>
+> // SKIN
+> {"skin_id": 5}
+>
+> // SUBSCRIPTION
+> {"duration_days": 30, "features": ["unlimited_readings", "all_skins"]}
+> ```
 
 > [!code]- Payment
 > - id
-> - user_id
-> - product_id
-> - amount
-> - currency
-> - payment_provider
-> - provider_payment_id
-> - status (enum: PENDING, COMPLETED, FAILED, REFUNDED)
+> - user_id — кто платит
+> - product_id — что покупает
+> - amount — сумма
+> - currency — валюта
+> - payment_provider — Telegram Stars, ЮKassa и т.д.
+> - provider_payment_id — ID транзакции у провайдера
+> - status (enum: PENDING, COMPLETED, FAILED, REFUNDED) — статус платежа
 > - created_at
 
 ## Use Cases

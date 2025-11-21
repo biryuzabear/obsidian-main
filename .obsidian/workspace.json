@@ -21,8 +21,24 @@
               "icon": "lucide-file",
               "title": "Heal Leg"
             }
+          },
+          {
+            "id": "7a20a49426aa66f7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Projects/Tarot Bot Pet Project.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Tarot Bot Pet Project"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -79,7 +95,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 408.5
+    "width": 301.5
   },
   "right": {
     "id": "681630878da48cb9",
@@ -157,10 +173,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Projects/Heal Leg.md"
+                "file": "Projects/Tarot Bot Pet Project.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Heal Leg"
+              "title": "File properties for Tarot Bot Pet Project"
             }
           }
         ],
@@ -177,20 +193,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Projects/Heal Leg.md",
+                "file": "Projects/Tarot Bot Pet Project.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Heal Leg"
+              "title": "Outline of Tarot Bot Pet Project"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 307.5
+    "width": 307.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -206,8 +223,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "7a20a49426aa66f7",
   "lastOpenFiles": [
+    "CLAUDE.md.tmp.10684.1763654986766",
+    "Projects/Heal Leg.md",
     "Projects/Job Search.md",
     "Projects/Bankruptcy.md",
     "Projects/Birth Certificate Apostille.md",
@@ -216,7 +235,6 @@
     "Projects/Fedorchenko Siblings Project.md",
     "Templates/project.md.tmp.2896.1763641373388",
     "Projects/Heal Hemorrhoids.md",
-    "Projects/Heal Leg.md",
     "Projects/Maksim Podcast.md",
     "Projects/Self Employment Germany.md",
     "Projects/Tarot Bot Pet Project.md",
@@ -239,7 +257,6 @@
     "Events/2025-08-23 Bear Sauna Leipzig.md",
     "Events/2025-08-16 Cruising Cocks Leipzig.md",
     "Events/2025-10-03 Taylor Party Leipzig.md",
-    "Events/2025-10-02 Roma & Nastya Hot Dogs Party.md",
     "Events/2025-09-08 Yandex Interview Advanced Coding.md.tmp.2896.1763639857755",
     "Events/2025-10-02 AIT School Consultation.md.tmp.2896.1763639840318",
     "CLAUDE.md.tmp.12236.1763586956562",

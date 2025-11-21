@@ -64,6 +64,8 @@ This is an Obsidian vault containing personal notes. All content is in Markdown 
 
 - **Iterative approach** — work through steps, can add new ones in parallel
 - **Artifacts** — results of steps (plans, information, code) are added to project notes
+- **Save immediately** — save discussion results to documents right away, refactor later
+- **Step by step** — don't output too much information at once
 - **Headings** — use correct hierarchy (H1 for title, H2 for sections, H3+ for subsections)
 - **Callouts** — use for:
   - Large chunks of information (features, use cases)
