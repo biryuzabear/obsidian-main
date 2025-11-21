@@ -24,6 +24,7 @@ tags:
 [Видео как заполнять анкету (на немецком)](https://www.youtube.com/watch?v=6O5Ser3DL0k)
 [Про самозанятость](https://uahelp.wiki/jobs/self-employment)
 [Справочник фрилансера](https://finber.de/freelancer-guide/)
+[Гайд от Филиппа Погорелова](https://t.me/c/2471375422/4425) (@PhilipPogorelov)
 
 > [!NOTE]- Ещё информация от Максима
 > Гайд по самозанятости – https://finber.de/freelancer-guide/

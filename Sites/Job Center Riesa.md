@@ -6,3 +6,5 @@ contacts:
 address:
 people:
 ---
+JC.Team8@kreis-meissen.de - адресс команды которая занимается нашей интеграцией
+ 
