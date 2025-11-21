@@ -28,13 +28,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/Tarot Bot Pet Project.md",
+                "file": "Events/2025-11-21 Oviva Interview.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Tarot Bot Pet Project"
+              "title": "2025-11-21 Oviva Interview"
+            }
+          },
+          {
+            "id": "dc727b4ecdf525b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Projects/Job Search.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Job Search"
             }
           }
         ],
@@ -173,10 +188,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Projects/Tarot Bot Pet Project.md"
+                "file": "Events/2025-11-21 Oviva Interview.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Tarot Bot Pet Project"
+              "title": "File properties for 2025-11-21 Oviva Interview"
             }
           }
         ],
@@ -193,13 +208,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Projects/Tarot Bot Pet Project.md",
+                "file": "Events/2025-11-21 Oviva Interview.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Tarot Bot Pet Project"
+              "title": "Outline of 2025-11-21 Oviva Interview"
             }
           }
         ]
@@ -225,9 +240,11 @@
   },
   "active": "7a20a49426aa66f7",
   "lastOpenFiles": [
+    "Projects/Job Search.md",
+    "Events/2025-11-21 Oviva Interview.md",
+    "Projects/Tarot Bot Pet Project.md",
     "CLAUDE.md.tmp.10684.1763654986766",
     "Projects/Heal Leg.md",
-    "Projects/Job Search.md",
     "Projects/Bankruptcy.md",
     "Projects/Birth Certificate Apostille.md",
     "Projects/Everyday Health.md",
@@ -237,7 +254,6 @@
     "Projects/Heal Hemorrhoids.md",
     "Projects/Maksim Podcast.md",
     "Projects/Self Employment Germany.md",
-    "Projects/Tarot Bot Pet Project.md",
     "Events/2025-10-18 Nastya Museum Dresden.md.tmp.2896.1763640872126",
     "Events/2025-09-01 Nastya Coffee Break.md.tmp.2896.1763640862916",
     "Events/2025-09-10 Pre-OP.md.tmp.2896.1763640653517",
@@ -260,7 +276,6 @@
     "Events/2025-09-08 Yandex Interview Advanced Coding.md.tmp.2896.1763639857755",
     "Events/2025-10-02 AIT School Consultation.md.tmp.2896.1763639840318",
     "CLAUDE.md.tmp.12236.1763586956562",
-    "CLAUDE.md.tmp.12236.1763586864001",
     "Attachments/Pasted image 20251119215821.png",
     "Attachments/PXL_20220508_102200331.jpg",
     "Attachments/qK7HGRhDTEM.jpg",
