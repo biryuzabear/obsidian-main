@@ -13,7 +13,16 @@
       "Bash(dir /b \"C:\\Users\\biryu\\OneDrive\\Desktop\\Capacities\\Appointments\")",
       "WebSearch",
       "mcp__context7__resolve-library-id",
-      "mcp__context7__get-library-docs"
+      "mcp__context7__get-library-docs",
+      "WebFetch(domain:www.glassdoor.com)",
+      "WebFetch(domain:www.justcrackinterview.com)",
+      "WebFetch(domain:uk.indeed.com)",
+      "WebFetch(domain:github.com)",
+      "mcp__puppeteer-mcp-claude__puppeteer_launch",
+      "mcp__puppeteer-mcp-claude__puppeteer_new_page",
+      "mcp__puppeteer-mcp-claude__puppeteer_navigate",
+      "mcp__puppeteer-mcp-claude__puppeteer_evaluate",
+      "mcp__puppeteer-mcp-claude__puppeteer_close_browser"
     ],
     "deny": [],
     "ask": []
