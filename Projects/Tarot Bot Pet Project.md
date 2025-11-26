@@ -38,6 +38,11 @@ field:
 
 # Info
 
+## Репозитории
+
+- Backend: `/home/biryuzabear/Projects/Tarot Telegram Bot/tarot_telegram_bot_backend`
+- Frontend: `/home/biryuzabear/Projects/Tarot Telegram Bot/tarot_telegram_bot_frontend`
+
 ## Технический стек
 
 > [!code]- Stack
@@ -385,6 +390,10 @@ field:
 > ### Фаза 8: Монетизация
 > - Telegram Stars / платёжка
 > - Покупка паков
+
+## Текущий этап
+
+Настройка деплоя через Dokploy.
 
 ## Идеи
 
